@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  container "maven" {
+    image = "maven:3.8.5-jdk-8"
+  }
+
   environment {
     // You must set the following environment variables
     // ORGANIZATION_NAME
