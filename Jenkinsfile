@@ -15,7 +15,6 @@ pipeline {
       steps {
         cleanWs()
         git credentialsId: 'GitHub', url: "https://github.com/${ORGANIZATION_NAME}/${SERVICE_NAME}"
-        checkout scm
       }
     }
     stage('Build') {
