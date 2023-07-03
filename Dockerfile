@@ -2,7 +2,7 @@ FROM openjdk:8u131-jdk-alpine
 
 MAINTAINER Richard Chesterwood "contact@virtualpairprogrammers.com"
 
-EXPOSE 8080
+EXPOSE 8086
 
 WORKDIR /usr/local/bin/
 
