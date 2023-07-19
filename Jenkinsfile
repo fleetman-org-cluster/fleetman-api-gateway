@@ -4,6 +4,7 @@ pipeline {
   tools {
         // Define the Maven installation
         maven 'maven'
+        docker 'docker'
     }
 
   environment {
