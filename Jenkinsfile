@@ -19,7 +19,8 @@ pipeline {
   stages {
     stage('Install Gettext') {
         steps {
-            sh 'apt-get update -y && apt-get install -y gettext'
+            //sh 'apt-get update -y && apt-get install -y gettext' on linux environment debian
+            sh 'brew update && brew install gettext' // mac os
         }
     }
     stage('Preparation') {
