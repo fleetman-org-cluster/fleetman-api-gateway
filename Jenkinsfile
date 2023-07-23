@@ -17,6 +17,11 @@ pipeline {
   }
 
   stages {
+    stage('Install Gettext') {
+        steps {
+            sh 'apt-get update -y && apt-get install -y gettext'
+        }
+    }
     stage('Preparation') {
       steps {
         cleanWs()
