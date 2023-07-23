@@ -17,18 +17,18 @@ pipeline {
   }
 
   stages {
-    stage('Install Gettext') {
-        steps {
-            //sh 'apt-get update -y && apt-get install -y gettext' on linux environment debian
-            sh 'brew update && brew install gettext' // mac os
-        }
-    }
     stage('Preparation') {
       steps {
         cleanWs()
         git credentialsId: 'GitHub', url: "https://github.com/${ORGANIZATION_NAME}/${SERVICE_NAME}"
         checkout scm
       }
+    }
+    stage('Install Gettext') {
+        steps {
+            //sh 'apt-get update -y && apt-get install -y gettext' on linux environment debian
+            sh 'brew update && brew install gettext' // mac os
+        }
     }
     stage('Build') {
       steps {
