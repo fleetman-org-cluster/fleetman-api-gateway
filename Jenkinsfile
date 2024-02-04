@@ -29,13 +29,13 @@ pipeline {
             //sh 'apt-get update -y && apt-get install -y gettext' on linux environment debian
             // sh 'brew update && brew install gettext' // mac os, you should install homebrew on your mac
           //sh 'xcode-select --update' // Install Xcode command-line tools (if not already installed)
-                sh 'curl -O https://ftp.gnu.org/gnu/gettext/gettext-0.21.tar.gz'
-                sh 'tar -xzf gettext-0.21.tar.gz'
-                dir('gettext-0.21') {
-                    sh './configure'
-                    sh 'make'
-                    sh 'sudo make install'
-                }
+           //     sh 'curl -O https://ftp.gnu.org/gnu/gettext/gettext-0.21.tar.gz'
+           //     sh 'tar -xzf gettext-0.21.tar.gz'
+            //    dir('gettext-0.21') {
+           //         sh './configure'
+            //        sh 'make'
+           //         sh 'sudo make install'
+           //     }
         }
     }
     stage('Build') {
